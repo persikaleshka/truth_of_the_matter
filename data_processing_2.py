@@ -3,6 +3,7 @@ import re
 
 df = pd.read_csv("unprocessed_data_all.csv")  
 
+
 df["region_id"] = df["region"]
 region_counts = df["region_id"].value_counts().sort_values(ascending=False)
 region_counts.to_csv("region_stats_by_id_all.csv")
