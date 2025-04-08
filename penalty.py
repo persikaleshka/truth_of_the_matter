@@ -11,7 +11,7 @@ fine_pattern = re.compile(
     \s*
     (\d{1,3}(?:[\s\u00A0]?\d{3})*|\d+(?:[.,]\d+)?)   
     \s*
-    (тыс|млн)?                              
+    (тыс(\.)?|млн(\.)?)?                              
     \s*
     (?:руб(?:\.|лей|ль)?|р\.)               
     """,
@@ -32,7 +32,7 @@ def extract_fines(text):
             fines.append(int(amount))
         except ValueError:
             continue
-    return fines
+    return [max(fines)] if fines else []
 
 df["fine_amounts"] = df["text"].apply(extract_fines)
 
