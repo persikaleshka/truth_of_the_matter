@@ -2,7 +2,7 @@ import streamlit as st
 import plotly.graph_objects as go
 import json
 
-geojson_file_path = r"geojson/Russia_regions.geojson"
+geojson_file_path = r"alenashar057/course_project/Russia_regions.geojson"
 
 with open(geojson_file_path, "r", encoding="utf-8") as file:
     geojson_content = json.load(file)
