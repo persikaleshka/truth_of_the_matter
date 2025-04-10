@@ -28,8 +28,8 @@ def page_map():
     st.title("🔍 HSE Legal BERT Platform")
     st.header("Отображение данных на картах")
     
-    dataset1 = pd.read_csv(r"data/region_stats_named_all.csv", encoding='utf-8')
-    dataset2 = pd.read_csv(r"data/region_stats_named_with_text.csv", encoding='utf-8')
+    dataset1 = pd.read_csv(r"alenashar057/course_project/region_stats_named_all.csv", encoding='utf-8')
+    dataset2 = pd.read_csv(r"alenashar057/course_project/region_stats_named_with_text.csv", encoding='utf-8')
 
     create_map(
         dataset1,
