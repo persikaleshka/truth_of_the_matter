@@ -3,7 +3,7 @@ import html
 from transformers import AutoTokenizer, AutoModelForTokenClassification
 from transformers.pipelines.token_classification import TokenClassificationPipeline
 
-model_path = r"alenashar057/truth_of_the_matter_model_rubert_tiny2'"
+model_path = r"alenashar057/truth_of_the_matter_model_rubert_tiny2"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = AutoModelForTokenClassification.from_pretrained(model_path)
 
